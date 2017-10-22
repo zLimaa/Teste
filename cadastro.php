@@ -12,28 +12,7 @@ require_once "conexao.php";
 
 	<body>
 
-		<div id="cadastro">
-			<form name ="Cadastro" method="post" action="?go=cadastro.php" id = "form">
-
-				Nome: <input type="text" name="nome" id = "txt_nome" maxlength="50" class=".txt" /><br></br>
-				CPF: <input type="text" name="cpf" id = "txt_cpf" maxlength="13" class=".txt"/><br></br>	
-				RG: <input type="text" name="rg" id = "txt_rg" maxlength="12" class=".txt"/><br></br>
-				DataNasc.: <input type="date" name="nascimento" id = "txt_nascimento" maxlength="8" class=".txt"/><br></br>
-				Telefone: <input type="text" name="telefone" id = "txt_telefone" maxlength="10" class=".txt"/><br></br>
-				Celular: <input type="text" name="celular" id = "txt_celular" maxlength="11" class=".txt"/><br></br>
-				E-mail: <input type="text" name="email" id = "txt_email" maxlength="50" class=".txt"/><br></br>
-				CEP: <input type="number" name="cep" id = "txt_cep" maxlength="8" class=".txt"/><br></br>
-				Endereço: <input type="text" name="endereco" id = "txt_endereco" maxlength="50" class=".txt"/><br></br>
-				Casa: <input type="text" name="casa" id = "txt_casa" maxlength="5" class=".txt"/><br></br>			
-				Bairro: <input type="text" name="bairro" id = "txt_bairro" maxlength="50" class=".txt"/><br></br>
-				Cidade: <input type="text" name="cidade" id = "txt_cidade" maxlength="50" class=".txt"/><br></br>
-				Cargo: <input type="text" name="cargo" id = "txt_cargo" maxlength="30" class=".txt"/><br></br>
-				Entrada: <input type="date" name="entrada" id = "txt_entrada" maxlength="8" class=".txt"/><br></br>
-				Login: <input type="text" name="login" id = "txt_login" maxlength="20" class=".txt"/><br></br>
-				Senha: <input type="password" name="senha" id = "txt_senha" maxlength="15" class=".txt"/><br></br>
-				Pergunta Seg.: <input type="text" name="pergunta" id = "txt_pergunta" maxlength="20" class=".txt"/><br></br>
-				Resposta: <input type="password" name="resposta" id = "txt_resposta" maxlength="15" class=".txt"/><br></br>
-
+		
 
 				<input type="submit" value="Cadastrar" id = "btn_cadastrar"/>
 			</form>
@@ -55,12 +34,6 @@ require_once "conexao.php";
 		$cep = $_POST['cep'];
 		$endereco =$_POST['endereco'];
 		$casa = $_POST['casa'];
-		$bairro = $_POST['bairro'];
-		$cidade = $_POST['cidade'];
-		$cargo =$_POST['cargo'];
-		$entrada = $_POST['entrada'];
-		$login = $_POST['login'];
-		$senha = $_POST['senha'];
 		$pergunta = $_POST['pergunta'];
 		$resposta = $_POST['resposta'];
 	}
