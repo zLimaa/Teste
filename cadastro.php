@@ -14,7 +14,6 @@ require_once "conexao.php";
 
 		
 
-
 	</body>
 </html> 
 
@@ -32,6 +31,12 @@ require_once "conexao.php";
 		$cep = $_POST['cep'];
 		$endereco =$_POST['endereco'];
 		$casa = $_POST['casa'];
+		$bairro = $_POST['bairro'];
+		$cidade = $_POST['cidade'];
+		$cargo =$_POST['cargo'];
+		$entrada = $_POST['entrada'];
+		$login = $_POST['login'];
+		$senha = $_POST['senha'];
 		$pergunta = $_POST['pergunta'];
 		$resposta = $_POST['resposta'];
 	}
