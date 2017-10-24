@@ -14,9 +14,7 @@ require_once "conexao.php";
 
 		
 
-				<input type="submit" value="Cadastrar" id = "btn_cadastrar"/>
-			</form>
-		</div>
+
 	</body>
 </html> 
 
