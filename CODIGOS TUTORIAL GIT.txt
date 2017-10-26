@@ -1,0 +1,93 @@
+git config --global user.name "teste"  | configura usuario git referente a maquina que ta usando
+git config --global user.email "teste@teste.com" | configura email do usuario git
+
+
+(git bash)
+
+ssh-keygen -t rsa -C "teste@teste.com"  + criar uma senha.  | gera chave ssh
+ssh -T git@github.com   | ativa chave ssh
+
+(---)
+
+mkdir pastateste   | cria pasta no diretorio desejado
+cd pastateste 	    | entra na pasta informada (cd .. volta para pasta anterior)
+git init	| torna a pasta do git, inicializa o git
+git remote add origin git@github.com:usuariogithub/diretorio.git    | seta essa pasta como referente ao diretorio remoto do github
+git pull origin master  + senha criada    | baixa todos os arquivos que tem no github para o diretorio local
+git add arquivoteste   | adiciona alterações feitas nos codigos, preparando pro commit.
+git status    | mostra o status no diretorio local
+git commit -m "descrição do commit"   | da o commit (cria uma nova versão do codigo) passando uma mesagem de descrição
+git status   | mostra o status no diretorio local
+
+git log  | mostra os logs dos commits do repositorio remoto (todas as versoes criadas)
+git reset --hard (deleta tudo) / --mixed (volta pro modificado) /--soft (volta pro add, pronto pro commit)  (hash do commit) | deleta os commits feitos por engano, 		desde só desfazer o commit até excluir todos os dados sobre esse commit.
+ex: git reset --soft 5454da5s4d2asda2s1d2as4da5s6d45sads <-- (hash commit )  | demonstração de desfazer um commit, jogando para a area que está pronto para ser 		commitado
+
+git reset --soft (hash) | esse hash tem que ser o hash anterior ao commit que deseja desfazer.  ---- simples -----
+git status | mostra o status no diretorio local
+git reset HEAD arquivoteste  | desfaz o git add (deixando no estado de modificado)
+git status  | mostra o status no diretorio local
+git checkout arquivoteste | desfaz a alteração realizada (saindo do modificado pro nao modificado)
+git status  | mostra o status no diretorio local
+ 
+git reset --mixed (hash)   |desfaz o commit jogando para o estado de modificado (antes do git add )   ---- duplo -----
+git status  | mostra o status no diretorio local
+git checkout arquivoteste  | desfaz a alteração realizada (saindo do modificado pro nao modificado)
+git status  | mostra o status no diretorio local
+
+git reset --hard (hash)   |desfas e apaga tudo e qualquer alteração feita depois do commit (hash) anterior. deleta toda as alterações ---- triplo -----
+git status  | mostra o status no diretorio local
+
+git log  | mostra os logs dos commits do repositorio remoto (todas as versoes criadas)
+git shortlog  | mostra os logs dos commits do repositorio remoto (todas as versoes criadas) de forma mais simplificada
+
+git push origin master | upa todos as alterações/arquivos que está no diretorio local para o diretorio remoto no github.
+
+git checkout -b branchteste | cria uma nova branch e ja entra nela.
+
+git branch | lista as branchs existentes e mostra a qual está usando no momento.
+
+git branch -D branchteste | deleta a branch informada.
+
+git merge branchteste | da um merge entre os commits do branch master e os commits do branch teste.
+
+git log --graph | mostra o log de todos os commits com um grafico, possibilitando visualisar os merges...
+
+git stash | salva os arquivos que foram alterados mas que não quero commitar ainda, mas que tenho que sair da branch e ir mecher em outra. (uma forma de poder trocar de branch tendo um arquivo em alteração)
+
+
+git stash apply | retorna os arquivos em alteração que foi guardado para que pudesse ver outras branchs.
+
+git stash list  | lista todos os stash que tenho na branch
+
+git stash clear | limpa toda as stash que deixei guardada pra continua depois.
+
+git config --global alias.s status | serve para criar atalhos de comandos, o exemplo mostrado esta atribuindo git s como git status, atraves do alias."atalho" na config do git config.
+
+
+git tag -a 1.0.0 -m "criando tags/releases" | cria marcadores de versão, criar uma tag quando o release estiver pronto
+
+git push origin master --tags  | serve pra upar as tags para o git hub.
+
+git tag  | lista todas as tags criadas.
+
+git tag -d 1.0.0  | deleta a tag localmente, não no github.
+
+
+git show sda54da5s4da3sd4as5d | git show pássando a hash do commit voce visualisa o que foi feito, alterado, adicionado ou deletado no commit
+
+
+git revert sada45a6s4da4da65sd | basicamente não reseta o commit, mas paraliza ele. revete o commit desfazendo as alterações desse commit porem sem retirar do log, podendo assim recuperar esse log "quebrado" pra consertar.
+
+
+apagando tags e branchs no GITHUB
+
+tags >> git push origin  : 1.0.0 (versão da tag) 
+branch >> git push origin : teste (nome da branch)
+
+
+
+
+
+
+
